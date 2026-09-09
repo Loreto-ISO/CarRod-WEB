@@ -47,6 +47,7 @@ section > h2{ font-size: clamp(1.6rem, 3.4vw, 2.2rem); }
   border-bottom: 1px solid var(--line);
 }
 .logo{ font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:1.25rem; color:var(--yellow); }
+.logo-img{ height: 34px; width: auto; }
 .main-nav{ display:none; gap:1.5rem; }
 .main-nav a{ color: var(--text); font-size:0.95rem; }
 .main-nav a:hover{ color: var(--yellow); }
@@ -109,6 +110,16 @@ section > h2{ font-size: clamp(1.6rem, 3.4vw, 2.2rem); }
   border:1px solid var(--line); border-left: 3px solid var(--yellow);
   padding:0.4rem 0.8rem; font-size:0.85rem; color: var(--muted); border-radius: 2px;
 }
+
+/* ---------- Nosotros ---------- */
+.about{ padding-top: 3rem; padding-bottom: 3rem; z-index:1; }
+.about-grid{ display:grid; gap:1.5rem; }
+@media (min-width: 720px){ .about-grid{ grid-template-columns: 1fr 1fr; } }
+.about-item{
+  border-left: 3px solid var(--yellow); padding: 0.25rem 0 0.25rem 1.25rem;
+}
+.about-item h3{ color: var(--text); font-size:1.1rem; }
+.about-item p{ margin:0; }
 
 /* ---------- Servicios ---------- */
 .services{ z-index:1; }
