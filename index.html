@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>carRod — Instalaciones eléctricas y cargadores EV</title>
+<meta name="description" content="Instalaciones eléctricas, ingeniería integral y cargadores EV en la Región Metropolitana. Certificación SEC y garantía de 6 meses.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a href="#inicio" class="logo">carRod</a>
+  <nav class="main-nav" id="mainNav">
+    <a href="#servicios">Servicios</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#resenas">Reseñas</a>
+  </nav>
+  <a href="https://wa.me/56900000000?text=Hola%2C%20quiero%20cotizar" class="btn-wsp" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- Línea de corriente: hilo visual que conecta todas las secciones -->
+<svg class="current-line" viewBox="0 0 100 2400" preserveAspectRatio="none" aria-hidden="true">
+  <path id="currentPath" d="M 90 0 L 90 260 L 20 300 L 20 620 L 85 660 L 85 1020 L 15 1060 L 15 1420 L 88 1460 L 88 1820 L 25 1860 L 25 2200 L 90 2240 L 90 2400" />
+</svg>
+
+<main>
+
+  <section id="inicio" class="hero">
+    <div class="hero-copy">
+      <p class="hero-kicker">Instalaciones eléctricas · Ingeniería integral · Cargadores EV</p>
+      <h1>Corriente segura, instalada por gente certificada.</h1>
+      <p class="hero-lede">Trabajamos con hogares, condominios e inmobiliarias en toda la Región Metropolitana. Certificación SEC, garantía de 6 meses y atención directa por WhatsApp — sin vueltas.</p>
+      <div class="hero-actions">
+        <a href="https://wa.me/56900000000?text=Hola%2C%20quiero%20cotizar" class="btn-primary" target="_blank" rel="noopener">Cotizar ahora</a>
+        <a href="#servicios" class="btn-ghost">Ver servicios</a>
+      </div>
+      <div class="hero-badges">
+        <span>Certificación SEC</span>
+        <span>Garantía 6 meses</span>
+        <span>Atención personalizada</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicios" class="services">
+    <h2>Qué hacemos</h2>
+    <div class="services-grid">
+      <article class="service-card">
+        <h3>Instalación eléctrica</h3>
+        <p>Cableado, tableros y puntos de conexión ejecutados según norma, con revisión y certificación al cierre de la obra.</p>
+      </article>
+      <article class="service-card service-card--offset">
+        <h3>Ingeniería integral</h3>
+        <p>Diseño y cálculo de proyectos eléctricos completos, desde el plano hasta la puesta en marcha, para casas, condominios y obras nuevas.</p>
+      </article>
+      <article class="service-card">
+        <h3>Cargadores EV</h3>
+        <p>Evaluación de factibilidad, instalación y declaración TE-6 para cargadores domiciliarios, de condominio o de empresa.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="proyectos" class="projects">
+    <h2>Trabajos realizados</h2>
+    <p class="section-lede">Instalaciones entregadas en hogares y condominios de la Región Metropolitana. <em>(Reemplazar estas fotos de referencia por fotos reales de las instalaciones de carRod.)</em></p>
+    <div class="projects-grid">
+      <figure class="project-item"><div class="project-img ph-1"></div><figcaption>Tablero residencial</figcaption></figure>
+      <figure class="project-item"><div class="project-img ph-2"></div><figcaption>Cargador EV domiciliario</figcaption></figure>
+      <figure class="project-item"><div class="project-img ph-3"></div><figcaption>Instalación en condominio</figcaption></figure>
+      <figure class="project-item"><div class="project-img ph-4"></div><figcaption>Cableado de obra nueva</figcaption></figure>
+    </div>
+  </section>
+
+  <section id="resenas" class="reviews">
+    <h2>Lo que dicen nuestros clientes</h2>
+    <div class="reviews-track" id="reviewsTrack">
+      <!-- Se llena por JS desde el arreglo de reseñas -->
+    </div>
+  </section>
+
+  <section id="contacto" class="contact">
+    <h2>Conversemos tu proyecto</h2>
+    <p class="section-lede">Cuéntanos si es para tu casa, tu condominio o tu empresa y te respondemos directo por WhatsApp.</p>
+    <a href="https://wa.me/56900000000?text=Hola%2C%20quiero%20cotizar" class="btn-primary btn-primary--lg" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-main">
+    <div>
+      <p class="footer-logo">carRod</p>
+      <p>Instalaciones eléctricas, ingeniería integral y cargadores EV.</p>
+    </div>
+    <div class="footer-contact">
+      <!-- Reemplazar con los datos reales de la empresa -->
+      <p>RUT: XX.XXX.XXX-X</p>
+      <p>Dirección: [dirección comercial]</p>
+      <p><a href="mailto:contacto@carrod.cl">contacto@carrod.cl</a></p>
+    </div>
+    <div class="footer-social">
+      <a href="#" target="_blank" rel="noopener">Instagram</a>
+      <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="#" target="_blank" rel="noopener">TikTok</a>
+    </div>
+  </div>
+  <p class="footer-legal">© <span id="year"></span> carRod. Todos los derechos reservados.</p>
+</footer>
+
+<a href="https://wa.me/56900000000?text=Hola%2C%20quiero%20cotizar" class="wsp-float" target="_blank" rel="noopener" aria-label="Cotizar por WhatsApp">
+  <svg viewBox="0 0 32 32" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 1.9 6.5L4 29l7.7-1.9c1.8 1 3.9 1.5 6.3 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-2 0-3.9-.5-5.5-1.5l-.4-.2-4.6 1.1 1.2-4.5-.3-.4C5.1 17.8 4.5 16 4.5 15c0-6.3 5.2-11.5 11.5-11.5S27.5 8.7 27.5 15 22.3 24.8 16 24.8zm6.3-8.6c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.7.2-.2.3-.8 1.1-1 1.3-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-2-1.8-2.3-.2-.3 0-.5.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.8 1.2 3c.1.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
