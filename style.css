@@ -138,13 +138,12 @@ section > h2{ font-size: clamp(1.6rem, 3.4vw, 2.2rem); }
 /* ---------- Proyectos ---------- */
 .projects{ z-index:1; }
 .projects-grid{ display:grid; grid-template-columns: repeat(2,1fr); gap:1rem; }
-@media (min-width: 720px){ .projects-grid{ grid-template-columns: repeat(4,1fr); } }
+@media (min-width: 720px){ .projects-grid{ grid-template-columns: repeat(3,1fr); } }
 .project-item{ margin:0; }
-.project-img{ aspect-ratio: 4/3; border-radius: var(--radius); background: var(--bg-panel-2); border:1px solid var(--line); }
-.ph-1{ background: linear-gradient(135deg, #23200f, #14110C); }
-.ph-2{ background: linear-gradient(135deg, #241f10, #191510); }
-.ph-3{ background: linear-gradient(135deg, #201b0f, #14110C); }
-.ph-4{ background: linear-gradient(135deg, #221d0e, #171310); }
+.project-img{
+  aspect-ratio: 4/3; border-radius: var(--radius); border:1px solid var(--line);
+  width:100%; object-fit: cover; display:block;
+}
 .project-item figcaption{ margin-top:0.5rem; font-size:0.85rem; color: var(--muted); }
 
 /* ---------- Reseñas ---------- */
