@@ -218,3 +218,47 @@ section > h2{ font-size: clamp(1.6rem, 3.4vw, 2.2rem); }
 @media (prefers-reduced-motion: reduce){
   html{ scroll-behavior:auto; }
 }
+
+/* Portada / banner principal */
+.hero {
+  min-height: min(760px, calc(100svh - 74px));
+  display: flex;
+  align-items: center;
+  padding-top: clamp(6rem, 12vw, 10rem);
+  padding-bottom: clamp(6rem, 12vw, 10rem);
+}
+
+/* Fondos por sección */
+.services {
+  background: linear-gradient(135deg, #141414 0%, #0e0e0e 100%);
+  border-top: 1px solid #272727;
+  border-bottom: 1px solid #272727;
+}
+
+.about {
+  background: #191919;
+  border-top: 1px solid #2b2b2b;
+  border-bottom: 1px solid #2b2b2b;
+}
+
+.contact {
+  background: linear-gradient(135deg, #ffd100 0%, #e6b900 100%);
+  color: #0a0a0a;
+  border-radius: 4px;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+
+.contact h2,
+.contact .section-lede {
+  color: #0a0a0a;
+}
+
+.contact .btn-primary {
+  background: #0a0a0a;
+  color: #ffffff;
+}
+
+.contact .btn-primary:hover {
+  background: #242424;
+}
