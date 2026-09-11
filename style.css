@@ -7,8 +7,7 @@
   --text: #ffffff;
   --muted: #b3b3b3;
   --line: #272727;
-  --dark-text: #17140b;
-  --cream: #ffd100;
+  --dark-text: #0a0a0a;
   --radius: 4px;
   --maxw: 1140px;
 }
@@ -158,15 +157,12 @@ section > h2 {
   .logo-img {
     height: 54px;
   }
-
   .main-nav {
     display: flex;
   }
-
   .btn-wsp {
     display: inline-block;
   }
-
   .nav-toggle {
     display: none;
   }
@@ -279,7 +275,6 @@ section > h2 {
     opacity: 0;
     transform: translateY(14px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
@@ -313,6 +308,7 @@ section > h2 {
   padding: 0.85rem 1.6rem;
   border-radius: var(--radius);
   color: var(--text);
+  transition: border-color 0.15s ease, color 0.15s ease;
 }
 
 .btn-ghost:hover {
@@ -320,32 +316,49 @@ section > h2 {
   color: var(--yellow);
 }
 
-/* ---------- Fondos amarillos claros ---------- */
+/* ==================================================== */
+/* SECCIONES AMARILLAS (Servicios, Nosotros, Contacto)  */
+/* ==================================================== */
+
+/* Color de texto principal para estas secciones */
 .services,
 .about,
 .contact {
-  max-width: none;
-  margin-left: 0;
-  margin-right: 0;
-  padding-left: max(1.5rem, calc((100vw - var(--maxw)) / 2));
-  padding-right: max(1.5rem, calc((100vw - var(--maxw)) / 2));
-  background: var(--cream);
   color: var(--dark-text);
+  z-index: 1;
+}
+
+/* Forzamos que los títulos y párrafos sean negros aquí */
+.services h2,
+.services h3,
+.services p,
+.about h3,
+.about p,
+.contact h2,
+.contact p,
+.contact .section-lede {
+  color: var(--dark-text);
+}
+
+/* Truco para que el fondo amarillo ocupe el 100% del ancho de la pantalla 
+   sin romper el "max-width" del grid interior. */
+.services::before,
+.about::before,
+.contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  height: 100%;
+  background: var(--yellow);
+  z-index: -1;
 }
 
 /* ---------- Servicios ---------- */
-.services {
-  z-index: 1;
-  border-top: 1px solid #eadb9e;
-  border-bottom: 1px solid #eadb9e;
-}
-
-.services h2,
-.services h3,
-.services p {
-  color: var(--dark-text);
-}
-
 .services-grid {
   display: grid;
   gap: 1.5rem;
@@ -353,93 +366,46 @@ section > h2 {
 }
 
 .service-card {
-  background: #ffffff;
-  border: 1px solid #e8dfc9;
-  border-left: 3px solid #c99d00;
+  background: #ffffff; /* Tarjetas blancas para que contrasten */
+  border: none;
+  border-left: 4px solid var(--dark-text); /* Borde lateral negro */
   padding: 1.75rem;
   border-radius: var(--radius);
-  box-shadow: 0 8px 24px rgba(23, 20, 11, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
 .service-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(23, 20, 11, 0.16);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
 }
 
 .service-card h3 {
   font-size: 1.2rem;
 }
 
+/* Párrafo de la tarjeta un poco más gris para facilitar la lectura */
 .service-card p {
   margin: 0;
-  color: #4b4639;
+  color: #333333;
 }
 
 @media (min-width: 720px) {
   .services-grid {
     grid-template-columns: repeat(3, 1fr);
   }
-
   .service-card--offset {
     transform: translateY(1.75rem);
   }
-
   .service-card--offset:hover {
     transform: translateY(1.35rem);
   }
 }
 
-/* ---------- Cómo trabajamos ---------- */
-.process {
-  z-index: 1;
-}
-
-.process-list {
-  list-style: none;
-  margin: 2.5rem 0 0;
-  padding: 0;
-  display: grid;
-  gap: 1.75rem;
-}
-
-.process-list li {
-  display: flex;
-  gap: 1.25rem;
-  align-items: flex-start;
-}
-
-.process-num {
-  font-family: "Space Grotesk", sans-serif;
-  font-weight: 700;
-  font-size: 1.4rem;
-  color: var(--yellow);
-  line-height: 1.2;
-}
-
-.process-list h3 {
-  font-size: 1.05rem;
-  color: var(--text);
-  margin-bottom: 0.25rem;
-}
-
-.process-list p {
-  margin: 0;
-}
-
-@media (min-width: 720px) {
-  .process-list {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* ---------- Misión y visión ---------- */
+/* ---------- Misión y visión (Nosotros) ---------- */
 .about {
   padding-top: 4rem;
   padding-bottom: 4rem;
-  z-index: 1;
-  border-top: 1px solid #eadb9e;
-  border-bottom: 1px solid #eadb9e;
 }
 
 .about-grid {
@@ -448,13 +414,8 @@ section > h2 {
 }
 
 .about-item {
-  border-left: 3px solid #c99d00;
+  border-left: 3px solid var(--dark-text); /* Línea lateral negra */
   padding: 0.25rem 0 0.25rem 1.25rem;
-}
-
-.about-item h3,
-.about-item p {
-  color: var(--dark-text);
 }
 
 .about-item h3 {
@@ -470,6 +431,32 @@ section > h2 {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+/* ---------- Contacto ---------- */
+.contact {
+  text-align: center;
+}
+
+.contact .section-lede {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Botón negro en la sección amarilla para que contraste */
+.contact .btn-primary {
+  background: var(--dark-text);
+  color: var(--yellow);
+}
+
+.contact .btn-primary:hover {
+  background: #222222;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ==================================================== */
+/* RESTO DE SECCIONES (Fondo Oscuro Original)           */
+/* ==================================================== */
 
 /* ---------- Proyectos ---------- */
 .projects {
@@ -511,33 +498,6 @@ section > h2 {
   .projects-grid {
     grid-template-columns: repeat(3, 1fr);
   }
-}
-
-/* ---------- Contacto ---------- */
-.contact {
-  text-align: center;
-  z-index: 1;
-  border-top: 1px solid #eadb9e;
-  border-bottom: 1px solid #eadb9e;
-}
-
-.contact h2,
-.contact .section-lede {
-  color: var(--dark-text);
-}
-
-.contact .section-lede {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.contact .btn-primary {
-  background: var(--dark-text);
-  color: #ffffff;
-}
-
-.contact .btn-primary:hover {
-  background: #3a321b;
 }
 
 /* ---------- Footer ---------- */
@@ -622,7 +582,6 @@ section > h2 {
   html {
     scroll-behavior: auto;
   }
-
   .hero-kicker,
   .hero h1,
   .hero-lede,
@@ -631,57 +590,4 @@ section > h2 {
     opacity: 1;
     animation: none;
   }
-}
-
-/* Solo estas tres secciones: amarillo carRod + texto negro */
-.services,
-.about,
-.contact {
-  max-width: none;
-  margin-left: 0;
-  margin-right: 0;
-  padding-left: max(1.5rem, calc((100vw - var(--maxw)) / 2));
-  padding-right: max(1.5rem, calc((100vw - var(--maxw)) / 2));
-  background: #ffd100;
-  color: #0a0a0a;
-  border-top: 1px solid #d6ae00;
-  border-bottom: 1px solid #d6ae00;
-}
-
-/* Letras negras, misma tipografía del sitio */
-.services h2,
-.services h3,
-.services p,
-.about h3,
-.about p,
-.contact h2,
-.contact p {
-  color: #0a0a0a;
-}
-
-/* Tarjetas de “Qué hacemos” amarillas y texto negro */
-.service-card {
-  background: #ffd100;
-  border: 1px solid #0a0a0a;
-  border-left: 4px solid #0a0a0a;
-  box-shadow: none;
-}
-
-.service-card p {
-  color: #0a0a0a;
-}
-
-/* Misión y visión */
-.about-item {
-  border-left-color: #0a0a0a;
-}
-
-/* Botón negro sobre el fondo amarillo */
-.contact .btn-primary {
-  background: #0a0a0a;
-  color: #ffffff;
-}
-
-.contact .btn-primary:hover {
-  background: #292929;
 }
