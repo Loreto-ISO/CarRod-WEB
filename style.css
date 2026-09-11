@@ -219,31 +219,50 @@ section > h2{ font-size: clamp(1.6rem, 3.4vw, 2.2rem); }
   html{ scroll-behavior:auto; }
 }
 
-/* Portada / banner principal */
-.hero {
-  min-height: min(760px, calc(100svh - 74px));
-  display: flex;
-  align-items: center;
-  padding-top: clamp(6rem, 12vw, 10rem);
-  padding-bottom: clamp(6rem, 12vw, 10rem);
+/* Secciones claras y accesibles */
+.services {
+  background: #fffdf7; /* blanco cálido */
+  color: #17140b;
+  border-top: 1px solid #ece5d5;
+  border-bottom: 1px solid #ece5d5;
 }
 
-/* Fondos por sección */
-.services {
-  background: linear-gradient(135deg, #141414 0%, #0e0e0e 100%);
-  border-top: 1px solid #272727;
-  border-bottom: 1px solid #272727;
+.services h2,
+.services h3,
+.services p {
+  color: #17140b;
+}
+
+.service-card {
+  background: #ffffff;
+  border-color: #e8dfc9;
+  border-left-color: #d6a700;
+  box-shadow: 0 8px 24px rgba(23, 20, 11, 0.08);
+}
+
+.service-card p {
+  color: #4b4639;
 }
 
 .about {
-  background: #191919;
-  border-top: 1px solid #2b2b2b;
-  border-bottom: 1px solid #2b2b2b;
+  background: #fff4c7; /* amarillo crema */
+  color: #17140b;
+  border-top: 1px solid #eadb9e;
+  border-bottom: 1px solid #eadb9e;
+}
+
+.about h3,
+.about p {
+  color: #17140b;
+}
+
+.about-item {
+  border-left-color: #c99d00;
 }
 
 .contact {
-  background: linear-gradient(135deg, #ffd100 0%, #e6b900 100%);
-  color: #0a0a0a;
+  background: #ffe58a; /* amarillo claro */
+  color: #17140b;
   border-radius: 4px;
   margin-top: 3rem;
   margin-bottom: 5rem;
@@ -251,14 +270,14 @@ section > h2{ font-size: clamp(1.6rem, 3.4vw, 2.2rem); }
 
 .contact h2,
 .contact .section-lede {
-  color: #0a0a0a;
+  color: #17140b;
 }
 
 .contact .btn-primary {
-  background: #0a0a0a;
+  background: #17140b;
   color: #ffffff;
 }
 
 .contact .btn-primary:hover {
-  background: #242424;
+  background: #3a321b;
 }
