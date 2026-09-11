@@ -632,3 +632,56 @@ section > h2 {
     animation: none;
   }
 }
+
+/* Solo estas tres secciones: amarillo carRod + texto negro */
+.services,
+.about,
+.contact {
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: max(1.5rem, calc((100vw - var(--maxw)) / 2));
+  padding-right: max(1.5rem, calc((100vw - var(--maxw)) / 2));
+  background: #ffd100;
+  color: #0a0a0a;
+  border-top: 1px solid #d6ae00;
+  border-bottom: 1px solid #d6ae00;
+}
+
+/* Letras negras, misma tipografía del sitio */
+.services h2,
+.services h3,
+.services p,
+.about h3,
+.about p,
+.contact h2,
+.contact p {
+  color: #0a0a0a;
+}
+
+/* Tarjetas de “Qué hacemos” amarillas y texto negro */
+.service-card {
+  background: #ffd100;
+  border: 1px solid #0a0a0a;
+  border-left: 4px solid #0a0a0a;
+  box-shadow: none;
+}
+
+.service-card p {
+  color: #0a0a0a;
+}
+
+/* Misión y visión */
+.about-item {
+  border-left-color: #0a0a0a;
+}
+
+/* Botón negro sobre el fondo amarillo */
+.contact .btn-primary {
+  background: #0a0a0a;
+  color: #ffffff;
+}
+
+.contact .btn-primary:hover {
+  background: #292929;
+}
