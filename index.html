@@ -13,11 +13,9 @@
 <body>
 
 <header class="site-header">
-  <a href="#inicio" class="logo"><img src="assets/logo.png" alt="carRod" class="logo-img"></a>
+  <a href="#inicio" class="logo"><img src="assets/bann_sin_fondo.png" alt="carRod" class="logo-img"></a>
   <nav class="main-nav" id="mainNav">
-    <a href="#servicios">Servicios</a>
-    <a href="#proyectos">Proyectos</a>
-    <a href="#nosotros">Nosotros</a>
+    <a href="#servicios">Servicios</a> <a href="#proyectos">Proyectos</a> <a href="#nosotros">Nosotros</a>
   </nav>
   <a href="https://wa.me/56945868589?text=Hola%2C%20quiero%20cotizar" class="btn-wsp" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
   <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
@@ -32,20 +30,29 @@
 
 <main>
 
-  <section id="inicio" class="hero">
-    <div class="hero-copy">
-      <p class="hero-kicker">Instalaciones eléctricas · Ingeniería integral · Cargadores EV</p>
-      <h1>Corriente segura, instalada por gente certificada.</h1>
-      <p class="hero-lede">Trabajamos con hogares, condominios e inmobiliarias en toda la Región Metropolitana. Certificación SEC y atención directa por WhatsApp — sin vueltas.</p>
-      <div class="hero-actions">
-        <a href="https://wa.me/56945868589?text=Hola%2C%20quiero%20cotizar" class="btn-primary" target="_blank" rel="noopener">Cotizar ahora</a>
-        <a href="#servicios" class="btn-ghost">Ver servicios</a>
+<section id="inicio" class="hero">
+    <div class="hero-wrapper">
+      
+      <div class="hero-copy">
+        <p class="hero-kicker">Instalaciones eléctricas · Ingeniería integral · Cargadores EV</p>
+        <h1>Corriente segura, instalada por gente certificada.</h1>
+        <p class="hero-lede">Trabajamos con hogares, condominios e inmobiliarias en toda la Región Metropolitana. Certificación SEC y atención directa por WhatsApp — sin vueltas.</p>
+        <div class="hero-actions">
+          <a href="https://wa.me/56945868589?text=Hola%2C%20quiero%20cotizar" class="btn-primary" target="_blank" rel="noopener">Cotizar ahora</a>
+          <a href="#servicios" class="btn-ghost">Ver servicios</a>
+        </div>
+        <div class="hero-badges">
+          <span>Certificación SEC</span>
+          <span>Calidad garantizada</span>
+          <span>Atención personalizada</span>
+        </div>
       </div>
-      <div class="hero-badges">
-        <span>Certificación SEC</span>
-        <span>Calidad garantizada</span>
-        <span>Atención personalizada</span>
+
+      <!-- Nueva caja para la imagen -->
+      <div class="hero-visual">
+        <img src="https://grupoindustronic.com/wp-content/uploads/2024/06/Instalacion-electrica.webp" alt="Instalación eléctrica industrial" class="hero-img">
       </div>
+
     </div>
   </section>
 
@@ -71,20 +78,33 @@
     <h2>Cómo trabajamos</h2>
     <ol class="process-list">
       <li><span class="process-num">01</span><div><h3>Nos escribes por WhatsApp</h3><p>Nos cuentas qué necesitas: una instalación, un proyecto o un cargador EV.</p></div></li>
-      <li><span class="process-num">02</span><div><h3>Evaluamos y cotizamos</h3><p>Revisamos el caso y te enviamos una propuesta clara, sin letra chica.</p></div></li>
+      <li><span class="process-num">02</span><div><h3>Evaluamos y cotizamos</h3><p>Revisamos el caso y te enviamos una propuesta clara.</p></div></li>
       <li><span class="process-num">03</span><div><h3>Ejecutamos e instalamos</h3><p>Realizamos el trabajo según norma SEC, con revisión al cierre de la obra.</p></div></li>
     </ol>
   </section>
 
   <section id="nosotros" class="about">
-    <div class="about-grid">
-      <div class="about-item">
-        <h3>Misión</h3>
-        <p>Entregar instalaciones eléctricas y de electromovilidad seguras y certificadas, resolviendo cada proyecto —desde un hogar hasta un condominio o una empresa— con rapidez, respaldo técnico y trato directo con el cliente.</p>
+    <div class="about-container">
+      <!-- Lado izquierdo: Textos -->
+      <div class="about-content">
+        <h2>Quiénes somos</h2>
+        <p class="about-intro">Somos un equipo de ingenieros y técnicos eléctricos certificados, con experiencia en instalaciones residenciales, comerciales e industriales. Nos especializamos en entregar soluciones seguras y confiables, adaptadas a las necesidades de cada cliente.</p>
+        
+        <div class="about-grid">
+          <div class="about-item">
+            <h3>Misión</h3>
+            <p>Entregar instalaciones eléctricas y de electromovilidad seguras y certificadas, resolviendo cada proyecto con rapidez, respaldo técnico y trato directo con el cliente.</p>
+          </div>
+          <div class="about-item">
+            <h3>Visión</h3>
+            <p>Ser el referente en instalaciones eléctricas y cargadores EV de la Región Metropolitana, reconocidos por la calidad certificada del trabajo y la confianza.</p>
+          </div>
+        </div>
       </div>
-      <div class="about-item">
-        <h3>Visión</h3>
-        <p>Ser el referente en instalaciones eléctricas y cargadores EV de la Región Metropolitana, reconocidos por la calidad certificada del trabajo y la confianza que generamos en cada cliente.</p>
+      
+      <!-- Lado derecho: Imagen decorativa -->
+      <div class="about-visual">
+        <img src="https://www.solarescenter.cl/wp-content/uploads/2026/04/Gemini_Generated_Image_8s9iwy8s9iwy8s9i.png" alt="Equipo carRod" class="about-img">
       </div>
     </div>
   </section>
@@ -92,21 +112,17 @@
   <section id="proyectos" class="projects">
     <h2>Trabajos realizados</h2>
     <p class="section-lede">Instalaciones entregadas en hogares, comercios y flotas de la Región Metropolitana.</p>
-    <div class="projects-grid">
-      <figure class="project-item">
-        <img src="assets/cargador-ev-domiciliario.jpg" alt="Tablero eléctrico redidencial" class="project-img" loading="lazy">
-        <figcaption>Cargador EV domiciliario</figcaption>
-      </figure>
-      <figure class="project-item">
-        <img src="assets/instalacion-residencial.jpg" alt="Tablero eléctrico residencial" class="project-img" loading="lazy">
-        <figcaption>Instalación residencial</figcaption>
-      </figure>
-      <figure class="project-item">
-        <img src="assets/carga-flota-comercial.jpg" alt="Cargador EV domiciliario" class="project-img" loading="lazy">
-        <figcaption>Carga de flota comercial</figcaption>
-      </figure>
-    </div>
+    
+    <!-- Contenedor vacío: Aquí JS inyectará el .map() -->
+    <div id="gallery-container" class="projects-grid"></div>
   </section>
+
+  <!-- Modal / Lightbox para ver la imagen en grande -->
+  <div id="imageModal" class="modal">
+    <span class="close-modal" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImg">
+    <div id="modalCaption"></div>
+  </div>
 
   <section id="contacto" class="contact">
     <h2>Conversemos tu proyecto</h2>
