@@ -287,7 +287,6 @@ section > h2 { font-size: clamp(1.6rem, 3.4vw, 2.2rem); }
 }
 
 /* ---------- Nosotros (Misión y Visión) ---------- */
-/* ---------- Nosotros (Misión y Visión) ---------- */
 .about { padding-top: 4rem; padding-bottom: 4rem; }
 
 .about-container {
@@ -306,11 +305,25 @@ section > h2 { font-size: clamp(1.6rem, 3.4vw, 2.2rem); }
 .about-grid { display: grid; gap: 1.5rem; }
 
 .about-item {
-  border-left: 3px solid #0A0A0A; 
-  padding: 0.25rem 0 0.25rem 1.25rem;
+  background: #FFFFFF; /* Fondo blanco sólido */
+  border: none;
+  border-left: 4px solid #0A0A0A; /* Línea lateral gruesa idéntica a los servicios */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Sombra elegante */
+  padding: 1.75rem; /* Mismo espaciado interno que las otras tarjetas */
+  border-radius: var(--radius);
 }
-.about-item h3 { color: #0A0A0A; font-size: 1.1rem; }
-.about-item p { margin: 0; color: #0A0A0A; font-size: 0.95rem; }
+
+.about-item h3 { 
+  color: #0A0A0A; 
+  font-size: 1.2rem; 
+  margin-bottom: 0.5rem; /* Separación con el texto */
+}
+
+.about-item p { 
+  margin: 0; 
+  color: #333333; /* Gris muy oscuro, idéntico al de los servicios para lectura perfecta */
+  font-size: 1rem; 
+}
 
 .about-visual { width: 100%; }
 .about-img {
