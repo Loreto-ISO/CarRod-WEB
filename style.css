@@ -281,3 +281,26 @@ section > h2{ font-size: clamp(1.6rem, 3.4vw, 2.2rem); }
 .contact .btn-primary:hover {
   background: #3a321b;
 }
+
+/* Fondos claros a ancho completo */
+.services,
+.about,
+.contact {
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: max(1.5rem, calc((100vw - var(--maxw)) / 2));
+  padding-right: max(1.5rem, calc((100vw - var(--maxw)) / 2));
+}
+
+.services {
+  background: #fff9eb;
+}
+
+.about {
+  background: #fff0b8;
+}
+
+.contact {
+  background: #ffe58a;
+}
