@@ -47,14 +47,17 @@ section > h2 { font-size: clamp(1.6rem, 3.4vw, 2.2rem); }
 
 /* ---------- Header ---------- */
 .site-header {
-  position: sticky; 
+  position: fixed; /* Evita el salto brusco al hacer scroll */
   top: 0; 
+  left: 0;
+  width: 100%;
   z-index: 40;
   display: flex; 
   align-items: center; 
   justify-content: space-between;
   gap: 1rem; 
-  padding: 1.5rem; 
+  /* Centra el logo y el menú al mismo ancho del texto de la página */
+  padding: 1.5rem max(1.5rem, calc((100vw - var(--maxw)) / 2)); 
   background: transparent;
   border-bottom: 1px solid transparent;
   transition: all 0.4s ease;
@@ -63,7 +66,8 @@ section > h2 { font-size: clamp(1.6rem, 3.4vw, 2.2rem); }
 .site-header.scrolled {
   background: rgba(10, 10, 10, 0.92);
   backdrop-filter: blur(6px);
-  padding: 0.75rem 1.5rem;
+  /* Reduce el alto pero mantiene el centrado lateral */
+  padding: 0.75rem max(1.5rem, calc((100vw - var(--maxw)) / 2));
   border-bottom: 1px solid var(--line);
 }
 
@@ -149,7 +153,13 @@ section > h2 { font-size: clamp(1.6rem, 3.4vw, 2.2rem); }
 }
 
 /* ---------- Hero (Banner 50/50) ---------- */
-.hero { padding-top: 1.5rem; padding-bottom: 3rem; position: relative; z-index: 1; }
+.hero { 
+  /* Agregamos espacio superior para que el texto no quede debajo del logo flotante */
+  padding-top: 10rem; 
+  padding-bottom: 3rem; 
+  position: relative; 
+  z-index: 1; 
+}
 
 .hero-wrapper {
   display: flex;
@@ -170,6 +180,12 @@ section > h2 { font-size: clamp(1.6rem, 3.4vw, 2.2rem); }
 }
 
 @media (min-width: 860px) {
+  .hero {
+    /* Espacio superior extra para monitores de PC */
+    padding-top: 12rem; 
+    padding-bottom: 4rem;
+  }
+  
   .hero-wrapper {
     flex-direction: row;
     justify-content: space-between;
@@ -332,7 +348,7 @@ section > h2 { font-size: clamp(1.6rem, 3.4vw, 2.2rem); }
 /* Devolvemos los espacios amplios en computadores */
 @media (min-width: 860px) {
   section { padding: 5rem 1.5rem; }
-  .hero { padding-top: 4.5rem; padding-bottom: 4rem; }
+  .hero { padding-top: 12rem; padding-bottom: 4rem; }
   
   .about-container { flex-direction: row; align-items: center; justify-content: space-between; gap: 2.5rem; }
   .about-intro { font-size: 1.05rem; margin-bottom: 2.5rem; }
