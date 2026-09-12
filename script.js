@@ -36,7 +36,7 @@ const proyectosData = [
   {
     id: 1,
     imagen: "assets/cargador-ev-domiciliario.jpg",
-    titulo: "Tablero eléctrico industrial"
+    titulo: "Cargador Wallbox 7kw"
   },
   {
     id: 2,
@@ -51,12 +51,12 @@ const proyectosData = [
   {
     id: 5,
     imagen: "assets/foto5.jpeg",
-    titulo: "Sistema de riego eléctrico inteligente"
+    titulo: "Instalación de puesta tierra"
   },
   {
     id: 6,
     imagen: "assets/foto6.jpeg",
-    titulo: "Cargador EV residencial"
+    titulo: "Cargador Wallbox 7kw"
   }
 ];
 
