@@ -48,6 +48,16 @@ const proyectosData = [
     id: 3,
     imagen: "assets/carga-flota-comercial.jpg",
     titulo: "Cargador EV comercial"
+  },
+  {
+    id: 5,
+    imagen: "assets/foto5.jpeg",
+    titulo: "Cargador EV para condominios"
+  },
+  {
+    id: 6,
+    imagen: "assets/foto6.jpeg",
+    titulo: "Instalación eléctrica comercial"
   }
 ];
 
