@@ -35,7 +35,13 @@ a { color: inherit; text-decoration: none; }
 img, svg { display: block; max-width: 100%; }
 :focus-visible { outline: 2px solid var(--yellow); outline-offset: 3px; }
 
-section { position: relative; padding: 5rem 1.5rem; max-width: var(--maxw); margin: 0 auto; }
+/* ---------- Espacios optimizados para celular ---------- */
+section { 
+  position: relative; 
+  padding: 3rem 1.5rem; /* Espaciado reducido para móvil */
+  max-width: var(--maxw); 
+  margin: 0 auto; 
+}
 section > h2 { font-size: clamp(1.6rem, 3.4vw, 2.2rem); }
 .section-lede { max-width: 46ch; margin-top: -0.5rem; margin-bottom: 2.5rem; }
 
@@ -142,19 +148,8 @@ section > h2 { font-size: clamp(1.6rem, 3.4vw, 2.2rem); }
   gap: 1.5rem;
 }
 
-/* ---------- Current line motif ---------- */
-.current-line {
-  position: absolute; top: 420px; right: 6%; width: 60px; height: calc(100% - 420px);
-  z-index: 0; pointer-events: none; display: none;
-}
-.current-line path {
-  fill: none; stroke: var(--yellow); stroke-width: 1.5; opacity: 0.35;
-  stroke-dasharray: 6 10; stroke-linecap: round;
-}
-@media (min-width: 860px) { .current-line { display: block; } }
-
 /* ---------- Hero (Banner 50/50) ---------- */
-.hero { padding-top: 4.5rem; padding-bottom: 4rem; position: relative; z-index: 1; }
+.hero { padding-top: 1.5rem; padding-bottom: 3rem; position: relative; z-index: 1; }
 
 .hero-wrapper {
   display: flex;
@@ -287,41 +282,41 @@ section > h2 { font-size: clamp(1.6rem, 3.4vw, 2.2rem); }
 }
 
 /* ---------- Nosotros (Misión y Visión) ---------- */
-.about { padding-top: 4rem; padding-bottom: 4rem; }
+.about { padding-top: 3rem; padding-bottom: 3rem; }
 
 .about-container {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 1.25rem; /* Reducimos el espacio en móvil para compactar la vista */
 }
 
 .about-intro {
-  font-size: 1.05rem;
+  font-size: 0.95rem; /* Letra ajustada para pantallas pequeñas */
   color: #0A0A0A;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
   max-width: 60ch;
 }
 
 .about-grid { display: grid; gap: 1.5rem; }
 
 .about-item {
-  background: #FFFFFF; /* Fondo blanco sólido */
+  background: #FFFFFF; 
   border: none;
-  border-left: 4px solid #0A0A0A; /* Línea lateral gruesa idéntica a los servicios */
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Sombra elegante */
-  padding: 1.75rem; /* Mismo espaciado interno que las otras tarjetas */
+  border-left: 4px solid #0A0A0A; 
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); 
+  padding: 1.75rem; 
   border-radius: var(--radius);
 }
 
 .about-item h3 { 
   color: #0A0A0A; 
   font-size: 1.2rem; 
-  margin-bottom: 0.5rem; /* Separación con el texto */
+  margin-bottom: 0.5rem; 
 }
 
 .about-item p { 
   margin: 0; 
-  color: #333333; /* Gris muy oscuro, idéntico al de los servicios para lectura perfecta */
+  color: #333333; 
   font-size: 1rem; 
 }
 
@@ -334,26 +329,31 @@ section > h2 { font-size: clamp(1.6rem, 3.4vw, 2.2rem); }
   box-shadow: 0 12px 24px rgba(0,0,0,0.1);
 }
 
+/* Devolvemos los espacios amplios en computadores */
 @media (min-width: 860px) {
-  .about-container { flex-direction: row; align-items: center; justify-content: space-between; }
+  section { padding: 5rem 1.5rem; }
+  .hero { padding-top: 4.5rem; padding-bottom: 4rem; }
+  
+  .about-container { flex-direction: row; align-items: center; justify-content: space-between; gap: 2.5rem; }
+  .about-intro { font-size: 1.05rem; margin-bottom: 2.5rem; }
   .about-content { flex: 1.2; }
   .about-grid { grid-template-columns: 1fr 1fr; }
   .about-visual { flex: 0.8; max-width: 450px; }
 }
 
 /* ---------- Modal de Proyectos ---------- */
-.project-item { cursor: pointer; } /* Cursor de manito para indicar clic */
+.project-item { cursor: pointer; } 
 
 .modal {
-  display: none; /* Oculto por defecto */
+  display: none; 
   position: fixed; z-index: 100; left: 0; top: 0;
   width: 100%; height: 100%; overflow: auto;
-  background-color: rgba(10, 10, 10, 0.95); /* Fondo oscuro */
+  background-color: rgba(10, 10, 10, 0.95); 
   backdrop-filter: blur(4px);
   align-items: center; justify-content: center; flex-direction: column;
 }
 
-.modal.show { display: flex; } /* Clase que activa JS para mostrarlo */
+.modal.show { display: flex; } 
 
 .modal-content {
   max-width: 90%; max-height: 80vh;
